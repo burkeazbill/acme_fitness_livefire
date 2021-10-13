@@ -39,7 +39,7 @@ spec:
           command:
             - "redis-server"
           imagePullPolicy: Always
-          resources:
+#          resources:
 #           requests:
 #             cpu: "100m"
 #             memory: "100Mi"
@@ -131,13 +131,13 @@ spec:
         volumeMounts:
         - mountPath: "/data"
           name: "cart-data"
-        resources:
+#        resources:
 #         requests:
 #           memory: "64Mi"
 #           cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+#          limits:
+#            memory: "256Mi"
+#            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
@@ -331,13 +331,13 @@ spec:
         volumeMounts:
         - mountPath: "/data"
           name: "order-data"
-        resources:
+#        resources:
 #         requests:
 #           memory: "64Mi"
 #           cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+#         limits:
+#           memory: "256Mi"
+#            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
@@ -533,11 +533,11 @@ spec:
         volumeMounts:
         - mountPath: "/data"
           name: "users-data"
-        resources:
+#        resources:
 #         requests:
 #           memory: "64Mi"
 #           cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+#          limits:
+#            memory: "256Mi"
+#            cpu: "500m"
 ---
